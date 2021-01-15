@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <title>Launchpad 2020</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+     
+    <body style="background-color: gainsboro; text-align: center;">
+        
+        <div class=container>
+            <div class=row>
+                <div style="border: 0vh dotted rgb(82, 82, 122); font-size: 10%;" class=col-md-2> </div>
+                <div class=col-md-8>
+                    <button type="button" class="btn btn-lg btn-primary" style="width: 10vw; height:5vw; font-size: 1.5vw; text-align: center; padding: 0.5vw;" onclick="createChar()">CHARACTER</button>
+                    <button type="button" class="btn btn-lg btn-primary" style="width: 10vw; height:5vw; font-size: 1.5vw; text-align: center; padding: 0.5vw;" onclick="createHor(platforms,Platform)">PLATFORM</button>
+                    <button type="button" class="btn btn-lg btn-primary" style="width: 10vw; height:5vw; font-size: 1.5vw; text-align: center; padding: 0.5vw;" onclick="createVert(walls,Wall)">WALL</button>
+                    <button type="button" class="btn btn-lg btn-primary" style="width: 10vw; height:5vw; font-size: 1.5vw; text-align: center; padding: 0.5vw;" onclick="createWin()">WIN PLAT</button>
+                </div>
+                <div class=col-md-2><fieldset>
+                    <legend>Options</legend>
+                    <div>
+                      <label for="true">Keep Ratio</label>
+                      <input type="checkbox" id="stayratio" name="mySelection.stayratio" value="true">
+                    </div>
+                  </fieldset></div>
+            </div>
+        <div class=row  style="margin: auto;">
+           
+        <div class=col-md-1 style="border: .1vh dotted rgb(82, 82, 122); font-size: 50%;">
+            <p>Placeholder
+                <br>SCROLL: Left and Right arrow keys
+            <br> SELECT: Click object (get objects from buttons)
+            <br>MOVE: Click within box and drag
+            <br>EXPAND/CONTRACT: Click on corner knobs and drag in or out. 
+            <br>HOLD RATIO: Shift (Fixed ratio is a WIP and currently disabled.)
+            <br>BACKSPACE: Deletes selected Items
+            <br>CHANGE BACKGROUND: Spacebar
+            </p>
+        </div>
+        <div  class=col-md-10 style="margin: auto; width:fit-content">
+            <div id="overlay"style="margin: auto; width:fit-content; position: fixed;">
+            </div>
+            <div style="margin: auto;border:30px inset gray; width:fit-content">
+        <canvas id="gamecvs" width="750" height="500"></canvas>
+        <script src="createcode.js" type="text/javascript"></script>
+    </div>
+        </div>
+        <div class=col-md-1 style="font-size: 10%;">
+            
+        </div>
+        </div>
+        <div class=row>
+            <div class=col-md-1></div>
+            <div class=col-md-2>
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Size
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button" onclick="changeRes(1)">300x200</button>
+                        <button class="dropdown-item" type="button" onclick="changeRes(2)">600x400</button>
+                        <button class="dropdown-item" type="button" onclick="changeRes(3)">750x500</button>
+                        <button class="dropdown-item" type="button" onclick="changeRes(4)">900x600</button>
+                        <button class="dropdown-item" type="button" onclick="changeRes(5)">1200x800</button>
+                    </div>
+                  </div>
+
+                  
+
+            </div>
+  
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
